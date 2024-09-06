@@ -24,9 +24,6 @@ jobs:
       - name: Install dependencies without cache
         run: npm install --prefer-online --fetch-retries=3 --fetch-timeout=60000
 
-      - name: Verify .npmrc configuration
-        run: cat .npmrc
-
       - name: Build Angular app
         run: npm run build --prod
 
