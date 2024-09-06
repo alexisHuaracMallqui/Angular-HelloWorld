@@ -18,13 +18,6 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Configure .npmrc for Artifactory
-        run: |
-          echo "//ARTIFACT_DOMAIN/api/npm/genesis-npm-dev/:_auth=${{ secrets.ARTIFACTORY_AUTH_TOKEN }}" > .npmrc
-          echo "always-auth=true" >> .npmrc
-          echo "email=youremail@email.com" >> .npmrc
-          echo "registry=https://devopstdp.eastus2.cloudapp.azure.com/artifactory/api/npm/genesis-npm-dev/" >> .npmrc
-
       - name: Clean npm cache
         run: npm cache clean --force
 
