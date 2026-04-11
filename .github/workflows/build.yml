@@ -8,12 +8,13 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch: # <-- ¡Agrega esta línea exactamente aquí!
 
 jobs:
   build:
     name: Build Angular Project
     runs-on: ubuntu-latest
-
+ 
     steps:
       # 1. Obtener el código fuente del repositorio
       - name: Checkout Source Code
