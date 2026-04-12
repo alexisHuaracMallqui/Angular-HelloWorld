@@ -33,4 +33,4 @@ jobs:
 
       # 4. Compilar el proyecto en modo producción
       - name: Build Project
-        run: npm run build -- --configuration production
+        run: npm run buildd -- --configuration production
